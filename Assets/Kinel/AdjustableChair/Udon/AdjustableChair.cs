@@ -12,7 +12,7 @@ public class AdjustableChair : UdonSharpBehaviour
 
     [SerializeField] private Collider handleCollider;
     [SerializeField] private MeshRenderer handle;
-    [SerializeField] private SceneSmoothShift smoothShift;
+    [SerializeField] private SceneSmoothShift[] smoothShift;
     //[SerializeField] private Text text;
     [SerializeField] private Transform[] objects;
 
@@ -41,7 +41,8 @@ public class AdjustableChair : UdonSharpBehaviour
         if (handle != null)
             handle.enabled = true;
         
-        smoothShift.enabled = true;
+        for (int i = 0; i < smoothShift.Length; i++)
+            smoothShift[i].enabled = true;
     }
 
     private void SetOwnerGameObjects(Transform[] trans, VRCPlayerApi player)
@@ -64,7 +65,8 @@ public class AdjustableChair : UdonSharpBehaviour
         if (handle != null)
             handle.enabled = false;
         
-        smoothShift.enabled = false;
+        for (int i = 0; i < smoothShift.Length; i++)
+            smoothShift[i].enabled = false;
 
         var pickup = (VRCPickup) handleCollider.gameObject.GetComponent(typeof(VRCPickup));
         if(pickup != null)

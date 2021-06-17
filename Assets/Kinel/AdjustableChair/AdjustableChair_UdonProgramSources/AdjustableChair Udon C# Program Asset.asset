@@ -200,7 +200,7 @@ MonoBehaviour:
       Data: 14|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: SceneSmoothShift, Assembly-CSharp
+      Data: SceneSmoothShift[], Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -212,7 +212,7 @@ MonoBehaviour:
       Data: 0
     - Name: symbolResolvedTypeName
       Entry: 1
-      Data: VRCUdonUdonBehaviour
+      Data: UnityEngineComponentArray
     - Name: symbolOriginalName
       Entry: 1
       Data: smoothShift
